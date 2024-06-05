@@ -13,11 +13,11 @@ jobs:
     name: Publish
     runs-on: ubuntu-22.04
     steps:
-      - name: Publish Top Draft Release
+      - name: Publish Draft Release With Highest Semantic Version
         id: drafts
         env:
           GITHUB_TOKEN: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
-        uses: paketo-buildpacks/github-config/actions/release/publish-drafts@auto-release
+        uses: paketo-buildpacks/github-config/actions/release/publish-drafts@main
         with:
           repo: ${{ github.repository }}
 
